@@ -15,10 +15,13 @@ Vzhledem k prvotním verzím je nutno následující formáty dodržovat, domén
   > Základní formát: https://cc.moondev.eu/check-ping?host=example.com
 - TCP check:
   > Základní formát: https://cc.moondev.eu/check-tcp?host=example.com:443
+  > 
   > Pokud není specifikován port, je automaticky doplněn port 80.
 - Výsledek
   > Formát: https://cc.moondev.eu/check-result/<ID>
+  >
   > V případě time outu u hostu se výsledky zobrazí o pár sekund později, je tedy třeba stránku přenačíst.
+
 <br><br>
 ### Client
 Na základě poslaných informací ze serveru provede client příslušný check na daný host a uloží výsledky.
