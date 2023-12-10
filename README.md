@@ -1,4 +1,6 @@
  # Check-host API
+Inspirace: https://check-host.net/
+
 API slouží ke kontrole a monitorování stavu webových stránek, různých služeb a serverů z různých míst světa.
 Ke kontrole lze použít protokoly HTTP, ICMP a TCP.
 Jedná se o dvě Java aplikace, které spolu komunikují.
@@ -28,6 +30,7 @@ Server odesílá data na clienty přes kanály vytvořené pomocí Redis PubSub.
 
 ### Ukládání výsledků
 Výsledky se ukládají z clientů do Redis databáze a jsou zpětně dohledatelné serverem pomocí ID.
+Výsledky "response" jsou uvedeny v sekundách.
 <br><br>
 
 ### Lokace serverů (clientů)
