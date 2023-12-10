@@ -30,6 +30,7 @@ Server odesílá data na clienty přes kanály vytvořené pomocí Redis PubSub.
 
 ### Ukládání výsledků
 Výsledky se ukládají z clientů do Redis databáze a jsou zpětně dohledatelné serverem pomocí ID.
+
 Výsledky "response" jsou uvedeny v sekundách.
 <br><br>
 
