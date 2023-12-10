@@ -18,7 +18,7 @@ Vzhledem k prvotním verzím je nutno následující formáty dodržovat, domén
   > 
   > Pokud není specifikován port, je automaticky doplněn port 80.
 - Výsledek
-  > Formát: https://cc.moondev.eu/check-result/<ID>
+  > Formát: https://cc.moondev.eu/check-result/[ID]
   >
   > V případě time outu u hostu se výsledky zobrazí o pár sekund později, je tedy třeba stránku přenačíst.
 
