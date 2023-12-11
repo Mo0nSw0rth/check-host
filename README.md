@@ -62,4 +62,7 @@ Výsledky "response" jsou uvedeny v sekundách.
 
 ### Doporučená literatura
 https://redis.io/docs/connect/clients/java/
+
 https://github.com/google/gson/blob/main/UserGuide.md
+
+https://www.cloudflare.com/en-gb/learning/security/api/what-is-api-security/
