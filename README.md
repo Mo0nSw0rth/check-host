@@ -60,5 +60,6 @@ Výsledky "response" jsou uvedeny v sekundách.
 - [Cloudflare, Inc.](https://www.cloudflare.com/) - DDoS ochrana a CDN
 <br><br>
 
-### Zdroje
-Mé zkušenosti za posledních pár let.
+### Doporučená literatura
+https://redis.io/docs/connect/clients/java/
+https://github.com/google/gson/blob/main/UserGuide.md
