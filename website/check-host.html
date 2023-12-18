@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=montserrat:400" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Network Checker</title>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Check-Host</h1>
+    </div>
+    <div class="input-section">
+        <input type="text" id="hostInput" placeholder="Enter host...">
+        <button onclick="checkStatus('http')">Check HTTP</button>
+        <button onclick="checkStatus('tcp')">Check TCP</button>
+        <button onclick="checkStatus('ping')">Check PING</button>
+    </div>
+    <div class="result-section">
+        <table class="result-table">
+            <thead>
+            <tr>
+                <th>Location</th>
+                <th>Response</th>
+                <th>Code (HTTP only)</th>
+            </tr>
+            </thead>
+            <tbody id="resultTableBody">
+            </tbody>
+        </table>
+        <div class="loading">
+            <div id="checkingMessage"></div>
+            <div class="loader"></div>
+        </div>
+
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
