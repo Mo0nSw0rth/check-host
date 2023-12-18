@@ -64,7 +64,9 @@ Výsledky "response" jsou uvedeny v sekundách.
 
 - [Akamai Technologies, Inc.](https://www.akamai.com/)  - Hosting použitých serverů
 - [Redis Ltd.](https://redis.com/) Cloudová redis databáze
-- [Cloudflare, Inc.](https://www.cloudflare.com/) - DDoS ochrana a CDN
+- [Cloudflare, Inc.](https://www.cloudflare.com/) - DDoS ochrana
+- [BunnyWay d.o.o.](https://bunny.net/) - Video hosting
+
 <br><br>
 
 ### Doporučená literatura
