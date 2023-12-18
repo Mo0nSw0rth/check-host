@@ -70,3 +70,7 @@ https://redis.io/docs/connect/clients/java/
 https://github.com/google/gson/blob/main/UserGuide.md
 
 https://www.cloudflare.com/en-gb/learning/security/api/what-is-api-security/
+
+
+### Využitá literatura
+https://www.w3schools.com/howto/howto_css_loader.asp
