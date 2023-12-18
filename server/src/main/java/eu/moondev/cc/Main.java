@@ -11,16 +11,14 @@ import java.util.*;
 public class Main {
 
     private static RedisConnector redisConnector;
-    private static String generateRandomString() {
-        String randomUUID = UUID.randomUUID().toString();
-        return randomUUID.replaceAll("-", "").substring(0, 10);
-    }
 
     public static void main(String[] args) throws Exception {
+        // Inicializace RedisConnectoru
         redisConnector = new RedisConnector(args[0]);
-
+        // Nastavení portu pro HTTP server
         int port = 80;
 
+        // Vytvoření a konfigurace HTTP serveru
         HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
         server.createContext("/check-ping", new PingHandler());
         server.createContext("/check-http", new WebHandler());
@@ -33,13 +31,16 @@ public class Main {
         System.out.println("Server started on port " + port);
     }
 
+    // HTTP handler pro zpracování výsledků
     static class ResultHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange exchange) throws IOException {
+            // Získání ID, typu a hosta
             String id = exchange.getRequestURI().getPath().split("/")[2];
             String type = redisConnector.getFromMap(id, "type");
             String host = redisConnector.getFromMap(id, "host");
 
+            // Zpracování výsledků podle typu
             switch (type) {
                 case "http":
                     JsonObject httpObject = new JsonObject();
@@ -102,6 +103,7 @@ public class Main {
         }
     }
 
+    // HTTP handler pro odeslání Pingu na checkovací servery
     static class PingHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange exchange) throws IOException {
@@ -116,6 +118,7 @@ public class Main {
         }
     }
 
+    // HTTP handler pro odeslání HTTP na checkovací servery
     static class WebHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange exchange) throws IOException {
@@ -130,6 +133,7 @@ public class Main {
         }
     }
 
+    // HTTP handler pro odeslání TCP na checkovací servery
     static class TcpHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange exchange) throws IOException {
@@ -144,6 +148,7 @@ public class Main {
         }
     }
 
+    // HTTP handler pro získání lokací o checkovacích serverech
     static class NodesHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange exchange) throws IOException {
@@ -152,13 +157,21 @@ public class Main {
         }
     }
 
+    // Metoda pro odeslání odpovědi
     private static void returnResponse(HttpExchange exchange, String response) throws IOException {
+        // Nastavení JSON a CORS headers odpovědi a odeslání
         exchange.getResponseHeaders().set("Content-Type", "application/json");
         exchange.getResponseHeaders().set("Access-Control-Allow-Origin", "*");
         exchange.sendResponseHeaders(200, response.length());
         try (OutputStream os = exchange.getResponseBody()) {
             os.write(response.getBytes());
         }
+    }
+
+    // Generování náhodného UUID pro přidání do Redisu
+    private static String generateRandomString() {
+        String randomUUID = UUID.randomUUID().toString();
+        return randomUUID.replaceAll("-", "").substring(0, 10);
     }
 
 }
