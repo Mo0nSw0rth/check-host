@@ -53,7 +53,11 @@ Výsledky "response" jsou uvedeny v sekundách.
 ![image](https://github.com/Mo0nSw0rth/check-host/assets/65095132/e78a850c-d1f5-47b1-8902-b5f07b967b30)
 
 
-### Použité služby
+### Video
+[![Video](https://cdn.moondev.eu/thumbnail.jpg)](https://iframe.mediadelivery.net/play/174621/e2e3aefe-a77c-4358-809f-501f0c9580d3)
+
+
+### Využité služby
 
 - [Akamai Technologies, Inc.](https://www.akamai.com/)  - Hosting použitých serverů
 - [Redis Ltd.](https://redis.com/) Cloudová redis databáze
